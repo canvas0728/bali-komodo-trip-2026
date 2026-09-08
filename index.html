@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>巴厘岛 · 科莫多 8 日旅行攻略（详细版）</title>
+<style>
+:root{
+  --navy:#0f3a4d; --blue:#1f7a9c; --teal:#0e9594; --red:#d64541; --orange:#e8871e;
+  --gold:#b45309; --green:#2e9e6b; --coral:#e05a47;
+  --ink:#2d2a26; --muted:#7c7568; --line:#e7e1d6; --cream:#faf7f1; --card:#ffffff;
+  --radius:14px;
+  --shadow:0 2px 12px rgba(15,58,77,.07);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;color:var(--ink);background:var(--cream);line-height:1.78;font-size:15.5px}
+b,strong{font-weight:700}
+a{color:var(--blue)}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* ============ HERO ============ */
+.hero{background:linear-gradient(135deg,#0d3346 0%,#11607a 45%,#0e8f8d 100%);color:#fff;padding:56px 0 42px;position:relative;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.05)}
+.hero::before{width:420px;height:420px;top:-160px;right:-120px}
+.hero::after{width:280px;height:280px;bottom:-140px;left:-80px}
+.hero .container{position:relative;z-index:1}
+.hero-tag{display:inline-block;border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:3px 16px;font-size:12px;letter-spacing:4px;margin-bottom:18px}
+.hero h1{font-size:40px;letter-spacing:2px;line-height:1.3;font-weight:800}
+.hero h1 small{display:block;font-size:19px;font-weight:500;letter-spacing:6px;margin-top:10px;color:rgba(255,255,255,.85)}
+.hero-chips{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 8px}
+.hchip{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);border-radius:10px;padding:8px 16px;font-size:13.5px;backdrop-filter:blur(2px)}
+.hchip b{color:#ffd98a}
+.countdown{margin-top:22px;display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:12px 20px;font-size:15px}
+.countdown b{color:#ffd98a;font-size:20px;font-variant-numeric:tabular-nums}
+/* 路线图 */
+.route{display:flex;flex-wrap:wrap;align-items:stretch;gap:0;margin-top:30px;justify-content:center}
+.rstop{display:flex;flex-direction:column;align-items:center;min-width:86px;padding:0 6px}
+.rdot{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#fff;border:2px solid rgba(255,255,255,.7);box-shadow:0 0 0 5px rgba(255,255,255,.12)}
+.rstop .rname{font-size:14.5px;font-weight:700;margin-top:8px}
+.rstop .rsub{font-size:11.5px;color:rgba(255,255,255,.75);line-height:1.5;text-align:center}
+.rleg{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:74px;padding-top:2px}
+.rleg svg{width:20px;height:20px;fill:rgba(255,255,255,.92);margin-bottom:2px}
+.rleg .rl2{font-size:10.5px;color:rgba(255,255,255,.72);text-align:center;line-height:1.4}
+.c-sg{background:#5a6b7d}.c-kuta{background:#3b6ea5}.c-uluwatu{background:#0e9594}.c-komodo{background:#d64541}.c-ubud{background:#2e9e6b}.c-home{background:#5a6b7d}
+
+/* ============ 提醒横幅 ============ */
+.alerts{margin-top:-24px;position:relative;z-index:5}
+.alert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.alert-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 18px;border-top:4px solid var(--orange);font-size:13.5px;line-height:1.7}
+.alert-card.red{border-top-color:var(--red)}
+.alert-card.blue{border-top-color:var(--blue)}
+.alert-card h4{font-size:14.5px;margin-bottom:6px;color:var(--navy)}
+
+/* ============ 导航 ============ */
+.navbar{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:0 1px 8px rgba(15,58,77,.05)}
+.nav-inner{display:flex;align-items:center;gap:4px;max-width:1080px;margin:0 auto;padding:0 12px;overflow-x:auto;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.navbar a{flex:none;text-decoration:none;color:var(--muted);font-size:14px;font-weight:600;padding:13px 14px;border-bottom:3px solid transparent;white-space:nowrap}
+.navbar a.on{color:var(--navy);border-bottom-color:var(--red)}
+.navbar .print-btn{margin-left:auto;flex:none;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:7px 14px;font-size:13px;cursor:pointer;margin-top:6px;margin-bottom:6px}
+.navbar .print-btn:hover{background:var(--blue)}
+
+/* ============ 章节通用 ============ */
+main section{padding:52px 0 10px;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
+.sec-no{font-size:44px;font-weight:800;color:rgba(31,122,156,.16);line-height:1;letter-spacing:-2px}
+.sec-head h2{font-size:25px;color:var(--navy);letter-spacing:1px}
+.sec-sub{color:var(--muted);font-size:13.5px;margin-bottom:24px;padding-left:76px}
+@media(max-width:640px){.sec-sub{padding-left:0}}
+
+/* 卡片与表格 */
+.panel{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px;margin-bottom:18px}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.8px}
+th{background:#f2ede3;color:var(--navy);font-size:12.5px;letter-spacing:1px;text-align:left;padding:10px 12px;white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td .sub{color:var(--muted);font-size:12.5px;display:block;line-height:1.6}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;border-radius:6px;padding:2px 9px;white-space:nowrap;color:#fff}
+.b-must{background:var(--red)}.b-strong{background:var(--orange)}.b-rec{background:#c98a12}.b-free{background:var(--green)}.b-done{background:var(--blue)}
+
+/* 区域卡片 */
+.city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
+.city-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;border-top:5px solid var(--blue)}
+.city-card.c-uluwatu{border-top-color:var(--teal)}
+.city-card.c-komodo{border-top-color:var(--red)}
+.city-card.c-ubud{border-top-color:var(--green)}
+.city-card h3{font-size:17px;color:var(--navy);margin-bottom:2px}
+.city-card .en{font-size:11.5px;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+.city-card .dates{font-size:13px;font-weight:700;margin:10px 0 4px;color:var(--navy)}
+.city-card .stay{font-size:12.5px;color:var(--muted);line-height:1.6;margin-bottom:8px}
+.city-card .hl{font-size:12.5px;line-height:1.7;border-top:1px dashed var(--line);padding-top:8px}
+
+.note-box{background:#fdf6e8;border-left:4px solid var(--orange);border-radius:0 10px 10px 0;padding:14px 18px;font-size:13.5px;margin:14px 0;line-height:1.8}
+.note-box.blue{background:#eef5fa;border-left-color:var(--blue)}
+.note-box.red{background:#fdefee;border-left-color:var(--red)}
+.note-box .nt{font-weight:800;color:var(--navy);margin-right:6px}
+
+/* 预算条 */
+.budget-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:8px 0 6px}
+.bcell{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:14px;text-align:center}
+.bcell .bv{font-size:19px;font-weight:800;color:var(--navy)}
+.bcell .bc{font-size:12.5px;color:var(--muted);margin-top:2px}
+.bcell.total{background:var(--navy);color:#fff}
+.bcell.total .bv{color:#ffd98a}.bcell.total .bc{color:rgba(255,255,255,.75)}
+
+/* ============ 预订日历时间轴 ============ */
+.cal-tl{position:relative;padding-left:30px}
+.cal-tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.cal-item{position:relative;margin-bottom:20px;background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:16px 20px}
+.cal-item::before{content:"";position:absolute;left:-27px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--red);border:2.5px solid #fff;box-shadow:0 0 0 2px var(--line)}
+.cal-item:nth-child(2)::before{background:var(--orange)}
+.cal-item:nth-child(3)::before{background:#c98a12}
+.cal-item:nth-child(4)::before{background:var(--teal)}
+.cal-item:nth-child(5)::before{background:var(--green)}
+.cal-item:nth-child(6)::before{background:var(--blue)}
+.cal-when{display:inline-block;font-size:12.5px;font-weight:800;color:#fff;background:var(--navy);border-radius:6px;padding:2px 10px;margin-bottom:6px}
+.cal-item h4{font-size:15.5px;margin-bottom:4px}
+.cal-item p{font-size:13.5px;color:#4d473e;line-height:1.75}
+
+/* ============ 每日行程 ============ */
+.day-nav{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;scrollbar-width:none}
+.day-nav::-webkit-scrollbar{display:none}
+.day-nav a{flex:none;text-decoration:none;font-size:12.5px;font-weight:700;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 13px}
+.day-nav a:hover{border-color:var(--blue);color:var(--blue)}
+.day-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:22px;overflow:hidden;scroll-margin-top:70px}
+.day-head{display:flex;align-items:center;gap:14px;padding:16px 22px;color:#fff}
+.day-card.c-kuta .day-head{background:linear-gradient(120deg,#3b6ea5,#2c577f)}
+.day-card.c-uluwatu .day-head{background:linear-gradient(120deg,#0e9594,#0b7675)}
+.day-card.c-komodo .day-head{background:linear-gradient(120deg,#d64541,#b23a37)}
+.day-card.c-ubud .day-head{background:linear-gradient(120deg,#2e9e6b,#227a52)}
+.day-card.c-fly .day-head{background:linear-gradient(120deg,#5a6b7d,#46545f)}
+.day-num{background:rgba(255,255,255,.2);border:1.5px solid rgba(255,255,255,.6);border-radius:10px;text-align:center;padding:4px 12px;min-width:66px}
+.day-num .dn{font-size:15px;font-weight:800;line-height:1.3}
+.day-num .dd{font-size:11px;opacity:.9}
+.day-head h3{font-size:17.5px;letter-spacing:.5px}
+.day-head .dtag{margin-left:auto;font-size:11.5px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);padding:2px 10px;border-radius:999px;white-space:nowrap}
+.day-body{padding:18px 22px 20px}
+.tl{border-left:2px solid #e5dfd3;padding-left:20px;margin:10px 0 14px 4px}
+.tl-item{position:relative;padding:5px 0;font-size:14px}
+.tl-item::before{content:"";position:absolute;left:-26px;top:15px;width:9px;height:9px;border-radius:50%;background:#fff;border:2.5px solid var(--blue)}
+.day-card.c-uluwatu .tl-item::before{border-color:var(--teal)}
+.day-card.c-komodo .tl-item::before{border-color:var(--red)}
+.day-card.c-ubud .tl-item::before{border-color:var(--green)}
+.day-card.c-fly .tl-item::before{border-color:#5a6b7d}
+.tl-time{font-weight:800;color:var(--navy);margin-right:8px;font-variant-numeric:tabular-nums;font-size:13px;white-space:nowrap}
+.tip-box{background:#f6f9f4;border-left:4px solid var(--green);border-radius:0 10px 10px 0;padding:11px 16px;font-size:13px;line-height:1.75;margin-top:10px}
+.tip-box .tt{font-weight:800;color:var(--green);margin-right:6px}
+.food-line{font-size:12.8px;color:var(--muted);margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
+.food-line .fl{font-weight:800;color:#c98a12;margin-right:6px}
+
+/* ============ 注意事项 ============ */
+.tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tip-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px}
+.tip-card.wide{grid-column:1/-1}
+.tip-card h3{font-size:16.5px;color:var(--navy);margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--line);display:flex;align-items:center;gap:8px}
+.tip-card h3 .no{background:var(--navy);color:#fff;font-size:12px;border-radius:6px;padding:1px 9px}
+.tip-card ul{list-style:none}
+.tip-card li{font-size:13.6px;padding:7px 0 7px 18px;position:relative;border-bottom:1px dashed #f0ebe1;line-height:1.75}
+.tip-card li:last-child{border-bottom:none}
+.tip-card li::before{content:"";position:absolute;left:2px;top:16px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.tip-card.hot{border-top:4px solid var(--red)}
+.tip-card li b{color:var(--navy)}
+
+/* ============ 行李清单 ============ */
+.pack-progress{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 22px;margin-bottom:18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.pp-bar{flex:1;min-width:200px;height:12px;background:#eee7da;border-radius:99px;overflow:hidden}
+.pp-fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--blue));border-radius:99px;transition:width .35s}
+.pp-num{font-weight:800;color:var(--navy);font-size:14px}
+.reset-btn{background:#fff;border:1.5px solid var(--red);color:var(--red);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:700;cursor:pointer}
+.reset-btn:hover{background:var(--red);color:#fff}
+.pack-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.gcard{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 20px}
+.gcard h4{font-size:15px;color:var(--navy);display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;gap:8px}
+.gcard h4 .gicon{width:9px;height:18px;border-radius:4px;background:var(--teal);display:inline-block;margin-right:8px;vertical-align:-3px}
+.gcard h4 .gcount{font-size:12px;background:#f2ede3;border-radius:99px;padding:2px 10px;color:var(--muted);white-space:nowrap}
+.gcard.done{outline:2px solid var(--green)}
+.gcard ul{list-style:none}
+.pitem{display:flex;flex-wrap:wrap;gap:1px 10px;padding:9px 2px;border-bottom:1px dashed var(--line);align-items:baseline}
+.pitem:last-child{border-bottom:none}
+.pitem label{display:flex;gap:10px;cursor:pointer;align-items:baseline;min-width:0}
+.pitem input{width:17px;height:17px;accent-color:var(--teal);flex:none;transform:translateY(3px);cursor:pointer}
+.pitem .pt{font-weight:700;font-size:13.8px}
+.pitem input:checked~.pt{color:var(--muted);text-decoration:line-through;font-weight:500}
+.pitem small{width:100%;color:var(--muted);font-size:12.3px;padding-left:27px;line-height:1.65}
+
+/* ============ 速查 ============ */
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.site-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.site-chips a{font-size:12.5px;text-decoration:none;color:var(--blue);background:#eef5fa;border:1px solid #cfe2ef;border-radius:999px;padding:4px 12px}
+.site-chips a:hover{background:var(--blue);color:#fff}
+.chk-item{display:flex;gap:10px;padding:9px 2px;border-bottom:1px dashed var(--line);font-size:13.6px;align-items:baseline;cursor:pointer}
+.chk-item input{width:17px;height:17px;accent-color:var(--green);flex:none;transform:translateY(3px);cursor:pointer}
+.chk-item input:checked~span{color:var(--muted);text-decoration:line-through}
+
+/* ============ 景点导览卡 ============ */
+.spot-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.spot-card{background:#faf7f1;border:1px solid var(--line);border-radius:10px;padding:12px 15px}
+.spot-card h5{font-size:14px;color:var(--navy);margin-bottom:4px}
+.spot-card h5 span{font-weight:400;font-size:11.5px;color:var(--muted);margin-left:6px}
+.spot-card p{font-size:12.8px;line-height:1.72;color:#4d473e}
+.spot-card .sn{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:var(--blue);border-radius:5px;padding:1px 8px;margin-right:8px;vertical-align:1px}
+.city-block.uluwatu .spot-card .sn{background:var(--teal)}
+.city-block.komodo .spot-card .sn{background:var(--red)}
+.city-block.ubud .spot-card .sn{background:var(--green)}
+.city-block{margin-bottom:26px}
+.city-block>h3{font-size:17px;color:var(--navy);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.city-block>h3::before{content:"";width:8px;height:22px;border-radius:4px;background:var(--blue);display:inline-block}
+.city-block.uluwatu>h3::before{background:var(--teal)}
+.city-block.komodo>h3::before{background:var(--red)}
+.city-block.ubud>h3::before{background:var(--green)}
+.food-strip{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:12.8px;line-height:2.1}
+.food-strip b{color:var(--navy);margin-right:8px}
+.food-strip .fchip{display:inline-block;background:#fdf6e8;border:1px solid #f0e2c8;border-radius:999px;padding:2px 12px;margin:2px 4px 2px 0}
+
+footer{margin-top:56px;background:var(--navy);color:rgba(255,255,255,.75);padding:30px 0 34px;font-size:12.8px;line-height:1.9}
+footer b{color:#ffd98a}
+
+#backTop{position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 4px 14px rgba(15,58,77,.3);z-index:60}
+#backTop.show{opacity:1;pointer-events:auto}
+
+@media(max-width:860px){
+  .city-grid{grid-template-columns:1fr 1fr}
+  .budget-strip{grid-template-columns:repeat(2,1fr)}
+  .alert-grid{grid-template-columns:1fr}
+  .tips-grid,.pack-grid,.quick-grid,.spot-grid{grid-template-columns:1fr}
+  .hero h1{font-size:30px}
+}
+@media(max-width:520px){
+  .city-grid{grid-template-columns:1fr}
+  .hero h1{font-size:25px}
+  .rleg{min-width:52px}
+}
+@media print{
+  .navbar,#backTop,.countdown,.reset-btn,.day-nav,.print-btn{display:none!important}
+  body{background:#fff;font-size:12px}
+  .hero{padding:24px 0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  main section{padding:24px 0 6px}
+  .day-card,.cal-item,.tip-card,.gcard,.panel{break-inside:avoid;box-shadow:none;border:1px solid #ddd}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="container">
+    <div class="hero-tag">TRAVEL GUIDE · 2026</div>
+    <h1>巴厘岛 · 科莫多 8 日旅行攻略<small>KUTA — 乌鲁瓦图 — 科莫多 — 乌布</small></h1>
+    <div class="hero-chips">
+      <span class="hchip">出行日期 <b>2026.10.03 — 10.11</b></span>
+      <span class="hchip">交通 <b>5 段飞行 + 包车/Grab</b></span>
+      <span class="hchip">住宿 <b>Kuta3晚 · 乌鲁瓦图2晚 · 科莫多1晚 · 乌布1晚</b></span>
+      <span class="hchip">亮点 <b>冲浪 · 悬崖海 · 科莫多龙 · 丛林乌布</b></span>
+    </div>
+    <div class="countdown" id="cdBox">距出发还有 <b id="cd">--</b></div>
+
+    <div class="route">
+      <div class="rstop"><div class="rdot c-sg">新</div><div class="rname">新加坡</div><div class="rsub">10/3 · SQ946 17:45</div></div>
+      <div class="rleg"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg><div class="rl2">SQ946<br>17:45-20:25</div></div>
+      <div class="rstop"><div class="rdot c-kuta">库</div><div class="rname">Kuta</div><div class="rsub">10/3-10/5 · 2晚</div></div>
+      <div class="rleg"><svg viewBox="0 0 24 24"><path d="M18.9 6.84A4.9 4.9 0 0 0 14 5H7a5 5 0 0 0-4.9 4.1L1 14v5a1 1 0 0 0 1 1h1a2 2 0 0 0 4 0h8a2 2 0 0 0 4 0h1a1 1 0 0 0 1-1v-5.1l-2.1-7.06zM7 7h7a3 3 0 0 1 2.8 2l.9 3H4.1l1.1-4.2A3 3 0 0 1 7 7z"/></svg><div class="rl2">包车/Grab<br>约40分钟</div></div>
+      <div class="rstop"><div class="rdot c-uluwatu">乌</div><div class="rname">乌鲁瓦图</div><div class="rsub">10/5-10/7 · 2晚</div></div>
+      <div class="rleg"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg><div class="rl2">飞科莫多<br>9:00-10:00</div></div>
+      <div class="rstop"><div class="rdot c-komodo">科</div><div class="rname">科莫多</div><div class="rsub">10/7-10/8 · 1晚</div></div>
+      <div class="rleg"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg><div class="rl2">回巴厘岛<br>19:00-20:00</div></div>
+      <div class="rstop"><div class="rdot c-ubud">布</div><div class="rname">乌布</div><div class="rsub">10/9 · 1晚</div></div>
+      <div class="rleg"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg><div class="rl2">SQ939<br>13:15-16:00</div></div>
+      <div class="rstop"><div class="rdot c-sg">新</div><div class="rname">新加坡</div><div class="rsub">10/10 · 中转8h</div></div>
+      <div class="rleg"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg><div class="rl2">SQ810<br>00:30-06:35</div></div>
+      <div class="rstop"><div class="rdot c-home">京</div><div class="rname">北京大兴</div><div class="rsub">10/11 早</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 关键提醒 ================= -->
+<div class="alerts">
+  <div class="container">
+    <div class="alert-grid">
+      <div class="alert-card red">
+        <h4>最紧急 · 科莫多段国庆抢手</h4>
+        科莫多往返机票（10/7 去、10/8 回）和两个出海团（日落团 + 全日团）务必<b>立刻预订</b>。国庆是科莫多旺季，日落团船位和热门班次都会售罄。
+      </div>
+      <div class="alert-card blue">
+        <h4>印尼入境三件套 · 缺一不可</h4>
+        <b>① e-VOA 电子落地签</b>（提前网上办好，免排队）<b>② 电子入境卡</b>（抵达前 3 天内填写）<b>③ 巴厘岛旅游税 150K 印尼盾</b>（Love Bali 网站/App 缴纳，入境可能抽查）。
+      </div>
+      <div class="alert-card">
+        <h4>新加坡中转 · 也有一项要填</h4>
+        中国护照新加坡免签，但入境前 3 天内需填 <b>SG Arrival Card</b>（免费）。两程均为新航，行李大概率直挂北京，值机时口头确认一次。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 导航 ================= -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="#overview">行程总览</a>
+    <a href="#tickets">机票与预订</a>
+    <a href="#calendar">预订日历</a>
+    <a href="#daily">每日行程</a>
+    <a href="#spots">景点导览</a>
+    <a href="#tips">注意事项</a>
+    <a href="#food">美食购物</a>
+    <a href="#packing">行李清单</a>
+    <a href="#quickref">实用速查</a>
+    <button class="print-btn" onclick="window.print()">打印 / 存PDF</button>
+  </div>
+</nav>
+<main>
+
+<!-- ================= 01 行程总览 ================= -->
+<section id="overview">
+  <div class="container">
+    <div class="sec-head"><span class="sec-no">01</span><h2>行程总览</h2></div>
+    <p class="sec-sub">前松（海滩躺平）· 中紧（科莫多两天出海）· 后缓（乌布收尾）· 全程无时差</p>
+
+    <div class="city-grid">
+      <div class="city-card">
+        <h3>Kuta 库塔</h3><div class="en">KUTA · BALI</div>
+        <div class="dates">10/3 - 10/5 · 2 晚 <span style="color:var(--muted);font-weight:400">（+10/8 过渡 1 晚）</span></div>
+        <div class="stay">参考：Fairfield by Marriott Bali South Kuta（机场 15 分钟）</div>
+        <div class="hl">冲浪入门圣地 · Kuta Beach 日落 · massage 性价比之王</div>
+      </div>
+      <div class="city-card c-uluwatu">
+        <h3>乌鲁瓦图</h3><div class="en">ULUWATU · BALI</div>
+        <div class="dates">10/5 - 10/7 · 2 晚</div>
+        <div class="stay">参考：Bombora Balangan Resort（悬崖海滩一带）</div>
+        <div class="hl">70 米海蚀悬崖 · Melasti 果冻海 · Blue Point 冲浪观景 · Kecak 火舞</div>
+      </div>
+      <div class="city-card c-komodo">
+        <h3>科莫多</h3><div class="en">KOMODO · LABUAN BAJO</div>
+        <div class="dates">10/7 - 10/8 · 1 晚</div>
+        <div class="stay">参考：Puri Sari Beach Hotel（镇上海边，出海接送方便）</div>
+        <div class="hl">Padar 三湾 · 粉色沙滩 · 科莫多龙 · Manta 浮潜 · 万蝠归巢</div>
+      </div>
+      <div class="city-card c-ubud">
+        <h3>乌布</h3><div class="en">UBUD · BALI</div>
+        <div class="dates">10/9 · 1 晚</div>
+        <div class="stay">参考：Villa Semana Resort & Spa 或同档丛林酒店</div>
+        <div class="hl">圣猴森林 · 乌布皇宫 · 稻田徒步 · SPA 天堂</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>天数</th><th>日期</th><th>主题</th><th>核心安排</th><th>住宿</th></tr></thead>
+          <tbody>
+            <tr><td><b>D1</b></td><td>10/3 周六</td><td>抵达日</td><td>SQ946 20:25 落地登巴萨，打车进 Kuta，休整 + massage</td><td>Kuta</td></tr>
+            <tr><td><b>D2</b></td><td>10/4 周日</td><td>冲浪日</td><td>上午冲浪课 1.5h，下午补觉，傍晚 Kuta Beach 日落</td><td>Kuta</td></tr>
+            <tr><td><b>D3</b></td><td>10/5 周一</td><td>南下悬崖海岸</td><td>退房南下乌鲁瓦图，下午 Melasti Beach 果冻海</td><td>乌鲁瓦图</td></tr>
+            <tr><td><b>D4</b></td><td>10/6 周二</td><td>悬崖日落</td><td>上午躺平，下午 Blue Point 看冲浪 + 悬崖日落（备选 Kecak 火舞）</td><td>乌鲁瓦图</td></tr>
+            <tr><td><b>D5</b></td><td>10/7 周三</td><td>飞科莫多</td><td>9:00-10:00 飞科莫多，下午半日日落团（Kelor/Manjarite/Kalong）</td><td>下拉布安</td></tr>
+            <tr><td><b>D6</b></td><td>10/8 周四</td><td>科莫多全日</td><td>全日团（Padar/粉沙滩/科莫多龙/Manta），19:00 飞回巴厘岛</td><td>Kuta 过渡</td></tr>
+            <tr><td><b>D7</b></td><td>10/9 周五</td><td>乌布慢游</td><td>猴林 + 皇宫 + 市场 + 稻田徒步/SPA，住丛林酒店</td><td>乌布</td></tr>
+            <tr><td><b>D8</b></td><td>10/10 周六</td><td>离开 + 新加坡</td><td>8:00 乌布出发，13:15 飞新加坡，Jewel + 滨海湾夜景</td><td>飞机上</td></tr>
+            <tr><td><b>D9</b></td><td>10/11 周日</td><td>到家</td><td>SQ810 00:30 起飞，06:35 到北京大兴</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="note-box blue"><span class="nt">为什么这么排？</span>乌鲁瓦图放在科莫多之前：它离机场仅 40 分钟，赶 10/7 早班机不用凌晨起床；10/8 晚班机回来太晚，住机场边过渡一晚不赶路；乌布放最后一晚：次日 13:15 的航班时间从容，还能赚一个丛林清晨。</div>
+
+    <div class="budget-strip">
+      <div class="bcell"><div class="bv">¥1,100</div><div class="bc">科莫多往返机票/人</div></div>
+      <div class="bcell"><div class="bv">¥900</div><div class="bc">科莫多两个团/人</div></div>
+      <div class="bcell"><div class="bv">¥2,800</div><div class="bc">酒店 7 晚/人（中端）</div></div>
+      <div class="bcell"><div class="bv">¥1,500</div><div class="bc">餐饮/人</div></div>
+      <div class="bcell"><div class="bv">¥900</div><div class="bc">交通+门票+杂项/人</div></div>
+      <div class="bcell total"><div class="bv">¥7,200</div><div class="bc">合计/人（不含国际机票）</div></div>
+    </div>
+    <p style="font-size:12px;color:var(--muted)">以上为粗估参考：科莫多机票按已查到的 ¥510-620/程计；团费半日团约 ¥300-400、全日团约 ¥600-700（含午餐、浮潜装备，部分需另付国家公园门票）；酒店按 ¥400-800/晚双人间分摊。</p>
+  </div>
+</section>
+
+<!-- ================= 02 机票与预订 ================= -->
+<section id="tickets">
+  <div class="container">
+    <div class="sec-head"><span class="sec-no">02</span><h2>机票与项目预订</h2></div>
+    <p class="sec-sub">5 段航班一览 · 需要提前订的项目 · 参考价格（2026 年 9 月查询）</p>
+
+    <div class="panel">
+      <b style="color:var(--navy)">航班一览</b>
+      <div class="table-wrap" style="margin-top:10px">
+        <table>
+          <thead><tr><th>日期</th><th>航班</th><th>航线</th><th>时间</th><th>状态/参考价</th></tr></thead>
+          <tbody>
+            <tr><td>10/3</td><td><b>SQ946</b> 新加坡航空</td><td>新加坡樟宜T2 → 登巴萨I</td><td>17:45 - 20:25</td><td><span class="badge b-done">已出票</span></td></tr>
+            <tr><td>10/7</td><td>印尼国内段（亚航 QZ / 峇迪 ID）</td><td>登巴萨D → 科莫多LBJ</td><td>9:00 - 10:00</td><td><span class="badge b-must">待订</span><span class="sub">直飞约 ¥515-645/人，飞行 65-75 分钟</span></td></tr>
+            <tr><td>10/8</td><td>印尼国内段</td><td>科莫多LBJ → 登巴萨D</td><td>19:00 - 20:00</td><td><span class="badge b-must">待订</span><span class="sub">直飞约 ¥510-620/人</span></td></tr>
+            <tr><td>10/10</td><td><b>SQ939</b> 新加坡航空</td><td>登巴萨I → 新加坡樟宜T3</td><td>13:15 - 16:00</td><td><span class="badge b-done">已出票</span></td></tr>
+            <tr><td>10/11</td><td><b>SQ810</b> 新加坡航空</td><td>新加坡樟宜T3 → 北京大兴</td><td>00:30 - 06:35</td><td><span class="badge b-done">已出票</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box red" style="margin-bottom:0"><span class="nt">注意</span>10/3 前段（国内 → 新加坡）不在本次订单截图内：SQ946 是 17:45 从樟宜起飞，前段航班务必<b>预留 3 小时以上中转缓冲</b>；若非联程票，需入境新加坡取行李再值机，缓冲再加 1 小时。</div>
+    </div>
+
+    <div class="panel">
+      <b style="color:var(--navy)">需要提前预订的项目</b>
+      <div class="table-wrap" style="margin-top:10px">
+        <table>
+          <thead><tr><th>项目</th><th>日期</th><th>渠道</th><th>参考价</th><th>紧急度</th><th>备注</th></tr></thead>
+          <tbody>
+            <tr><td><b>科莫多半日日落团</b><span class="sub">Kelor + Manjarite + Kalong 万蝠归巢</span></td><td>10/7 下午</td><td>East Cruise Komodo 官网/WhatsApp，或 KLOOK</td><td>¥300-400/人</td><td><span class="badge b-must">立即订</span></td><td>约 11:00-12:00 出发，日落时到达 Kalong；确认含接送、浮潜装备、国家公园门票是否另付</td></tr>
+            <tr><td><b>科莫多全日团</b><span class="sub">Padar + 粉沙滩 + 科莫多龙 + Manta</span></td><td>10/8 全天</td><td>Ohana 或同级船公司</td><td>¥600-700/人</td><td><span class="badge b-must">立即订</span></td><td>选「出发早回得早」的班次（约 16:00-17:00 回），才能赶上 19:00 航班</td></tr>
+            <tr><td><b>Kuta 冲浪课</b></td><td>10/4 上午</td><td>KLOOK 搜「27 Surf」，选 8:30 接送套餐</td><td>¥150-250/人</td><td><span class="badge b-strong">提前 1 天</span></td><td>1.5 小时含教练 + 板 + 防晒服；近视可戴隐形眼镜</td></tr>
+            <tr><td><b>乌鲁瓦图 Kecak 火舞</b></td><td>10/6 傍晚（备选）</td><td>KLOOK 或现场</td><td>门票 50K + 演出 150K 印尼盾</td><td><span class="badge b-rec">想去再订</span></td><td>18:00 日落场最美；寺庙猴子多，眼镜帽子收好</td></tr>
+            <tr><td><b>酒店 × 5</b></td><td>全程</td><td>Agoda / Booking / 携程比价</td><td>¥400-800/晚</td><td><span class="badge b-strong">尽快</span></td><td>10/8 过渡酒店选机场附近便宜干净的即可</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 预订日历 ================= -->
+<section id="calendar">
+  <div class="container">
+    <div class="sec-head"><span class="sec-no">03</span><h2>预订与准备行动日历</h2></div>
+    <p class="sec-sub">按时间顺序执行，打勾式完成 · 临近出发前的事都已排到最后</p>
+
+    <div class="cal-tl">
+      <div class="cal-item">
+        <span class="cal-when">现在 · 立即</span>
+        <h4>订科莫多段机票 + 两个出海团</h4>
+        <p>10/7 去程（9:00-10:00 前后班次均可）、10/8 回程 19:00 班次；半日日落团和全日团同步订掉。国庆档这两样是全行程最紧俏的资源。订完全日团后确认回镇时间不超过 17:00。</p>
+      </div>
+      <div class="cal-item">
+        <span class="cal-when">9 月中旬</span>
+        <h4>订 5 家酒店 + 买旅行保险</h4>
+        <p>按「住宿分配」表下单：Kuta 2 晚、乌鲁瓦图 2 晚、下拉布安 1 晚、Kuta 过渡 1 晚、乌布 1 晚。保险选含「海岛活动/浮潜」责任的境外险（冲浪、浮潜、出海都在行程里）。</p>
+      </div>
+      <div class="cal-item">
+        <span class="cal-when">9 月下旬</span>
+        <h4>办 e-VOA 电子签 + 换汇 + 买电话卡</h4>
+        <p>e-VOA 在印尼移民局官网办理（约 50 万印尼盾，在线支付，1-2 个工作日出签，打印或存手机）。国内银行预约换约 500 万印尼盾现金（备小面额）。电话卡：淘宝买 Telkomsel 流量卡或 eSIM，比机场便宜一半。</p>
+      </div>
+      <div class="cal-item">
+        <span class="cal-when">出发前 3 天 · 9/30 起</span>
+        <h4>填印尼电子入境卡 + SG Arrival Card + 缴旅游税</h4>
+        <p>三个都只能在抵达前 3 天内填，别提前白填：① 印尼电子入境卡（All Indonesia App 或官网）；② 新加坡 SG Arrival Card；③ 巴厘岛旅游税 150K（Love Bali 在线缴，生成二维码截图）。顺手订 KLOOK 冲浪课。</p>
+      </div>
+      <div class="cal-item">
+        <span class="cal-when">出发前 48 小时</span>
+        <h4>值机 + 核对 + 离线包</h4>
+        <p>新航两段在线值机（起飞前 48 小时开放）；核对印尼国内段时刻（廉航常临时改点）；所有订单/电子票/签证截图存相册并邮箱备份；按文末「行前检查单」逐项打勾。</p>
+      </div>
+      <div class="cal-item">
+        <span class="cal-when">10/3 出发日</span>
+        <h4>飞新加坡转巴厘岛</h4>
+        <p>前段到新加坡后留足中转时间；SQ946 17:45 起飞、20:25 落地，巴厘岛与北京无时差。落地后按 D1 时间线执行。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 每日行程 ================= -->
+<section id="daily">
+  <div class="container">
+    <div class="sec-head"><span class="sec-no">04</span><h2>每日行程详解</h2></div>
+    <p class="sec-sub">小时级时间线 · 价格为印尼盾（K = 千盾，100K 约合 ¥45-48，2026 年汇率参考）</p>
+
+    <div class="day-nav">
+      <a href="#d1">D1 抵达</a><a href="#d2">D2 冲浪</a><a href="#d3">D3 南下</a><a href="#d4">D4 悬崖</a><a href="#d5">D5 飞科莫多</a><a href="#d6">D6 全日团</a><a href="#d7">D7 乌布</a><a href="#d8">D8 新加坡</a><a href="#d9">D9 到家</a>
+    </div>
+
+    <div class="day-card c-fly" id="d1">
+      <div class="day-head"><div class="day-num"><div class="dn">D1</div><div class="dd">10/3 周六</div></div><h3>新加坡 → 巴厘岛 · 抵达 Kuta</h3><span class="dtag">SQ946 · 无时差</span></div>
+      <div class="day-body">
+        <div class="tl">
+          <div class="tl-item"><span class="tl-time">14:30</span>（如前段航班较早抵达新加坡）樟宜机场中转休整，T2 候机</div>
+          <div class="tl-item"><span class="tl-time">17:45</span><b>SQ946 起飞</b>（樟宜 T2），飞行约 2 小时 40 分</div>
+          <div class="tl-item"><span class="tl-time">20:25</span>落地登巴萨 DPS 国际航站楼；走 e-VOA 通道过关 + 取行李约 1 小时</div>
+          <div class="tl-item"><span class="tl-time">21:30</span>Grab 打车去 Kuta 酒店（约 15 分钟，50-80K）<b>技巧：走到到达厅外的便利店门口再定位叫车</b>，比机场官方出租便宜一半以上</div>
+          <div class="tl-item"><span class="tl-time">22:00</span>入住，附近晚餐或做个 1 小时 massage（约 100-150K）放松</div>
+        </div>
+        <div class="tip-box"><span class="tt">提示</span>今晚把明天冲浪课的最终确认看一眼（接送时间/地点）；换点零钱备用，massage 小费一般 20-50K。</div>
+        <div class="food-line"><span class="fl">吃</span>Kuta 海滩沿线大排档烤玉米、印尼炒饭 Nasi Goreng；想正经吃可去 Beachwalk 购物中心餐饮层。</div>
+      </div>
+    </div>
+
+    <div class="day-card c-kuta" id="d2">
+      <div class="day-head"><div class="day-num"><div class="dn">D2</div><div class="dd">10/4 周日</div></div><h3>Kuta 冲浪日 · 沙滩日落</h3><span class="dtag">冲浪课 1.5h</span></div>
+      <div class="day-body">
+        <div class="tl">
+          <div class="tl-item"><span class="tl-time">08:30</span>冲浪学校来酒店接（27 Surf，KLOOK 提前订的接送套餐）</div>
+          <div class="tl-item"><span class="tl-time">09:00</span><b>Kuta Beach 冲浪课 1.5 小时</b>：岸上动作教学 20 分钟 + 下海实战；浪缓沙底，新手友好</div>
+          <div class="tl-item"><span class="tl-time">11:00</span>回酒店冲洗换衣服</div>
+          <div class="tl-item"><span class="tl-time">12:30</span>午餐：本地 Warung 小馆（人均 50-80K）</div>
+          <div class="tl-item"><span class="tl-time">14:00</span>回酒店睡午觉——冲浪比看起来累，别硬撑</div>
+          <div class="tl-item"><span class="tl-time">17:30</span>步行到 Kuta Beach 看日落（10 月日落约 18:15-18:30），沙滩上有冰镇 Bintang 啤酒卖</div>
+          <div class="tl-item"><span class="tl-time">19:00</span>晚餐 + 可选 SPA/massage；早点休息，明天换酒店</div>
+        </div>
+        <div class="tip-box"><span class="tt">提示</span>冲浪别戴手表、首饰、墨镜；穿冲浪学校提供的长袖防晒服；手机别带下水，让同伴在岸上拍或买学校的跟拍服务。</div>
+        <div class="food-line"><span class="fl">吃</span>晚餐推荐烤猪肋排或海鲜烧烤；Kuta 的 Beachwalk 附近选择最多。</div>
+      </div>
+    </div>
+
+    <div class="day-card c-uluwatu" id="d3">
+      <div class="day-head"><div class="day-num"><div class="dn">D3</div><div class="dd">10/5 周一</div></div><h3>Kuta → 乌鲁瓦图 · Melasti 果冻海</h3><span class="dtag">车程约 40 分钟</span></div>
+      <div class="day-body">
+        <div class="tl">
+          <div class="tl-item"><span class="tl-time">10:00</span>退房，Grab 南下乌鲁瓦图（约 40 分钟，150-200K）</div>
+          <div class="tl-item"><span class="tl-time">11:00</span>到酒店先寄存行李（一般 14:00 才能入住）</div>
+          <div class="tl-item"><span class="tl-time">12:00</span>酒店附近午餐</div>
+          <div class="tl-item"><span class="tl-time">14:00</span><b>Melasti Beach</b>：巴厘岛水质最清的海滩之一，石灰岩悬崖下的「果冻海」，适合游泳躺平（停车/门票小额，约 10K）</div>
+          <div class="tl-item"><span class="tl-time">17:30</span>海滩看日落 或回酒店泳池看悬崖海景</div>
+          <div class="tl-item"><span class="tl-time">19:00</span>晚餐，饭后早睡——后天要飞</div>
+        </div>
+        <div class="tip-box"><span class="tt">提示</span>Melasti 是礁石+沙滩混合滩，下水建议穿溯溪鞋；上午人最少，下午 4 点后旅行团散去也是好时段。</div>
+        <div class="food-line"><span class="fl">吃</span>乌鲁瓦图一带海景餐厅多，金巴兰海鲜烧烤大排档（日落位）也在 20 分钟车程内。</div>
+      </div>
+    </div>
+
+    <div class="day-card c-uluwatu" id="d4">
+      <div class="day-head"><div class="day-num"><div class="dn">D4</div><div class="dd">10/6 周二</div></div><h3>乌鲁瓦图悬崖日 · Blue Point 日落</h3><span class="dtag">退潮时段 16:00-18:00</span></div>
+      <div class="day-body">
+        <div class="tl">
+          <div class="tl-item"><span class="tl-time">上午</span>酒店躺平，或去 Balangan Beach 看浪发呆（小众沙滩，悬崖视野极好）</div>
+          <div class="tl-item"><span class="tl-time">12:00</span>午餐 + 回酒店午休</div>
+          <div class="tl-item"><span class="tl-time">15:30</span>出发去 <b>Blue Point（Suluban）海滩</b>：退潮时礁石间露出天然泳池，悬崖洞穴地貌很出片</div>
+          <div class="tl-item"><span class="tl-time">16:30</span>悬崖上的 <b>Single Fin</b> 酒吧占个好位：看崖下高手冲浪 + 悬崖日落，乌鲁瓦图最经典的傍晚</div>
+          <div class="tl-item"><span class="tl-time">19:00</span>海景餐厅晚餐</div>
+          <div class="tl-item"><span class="tl-time">21:00</span>回酒店收拾明天科莫多的小包，约明早 7:00 的车</div>
+        </div>
+        <div class="note-box" style="margin-bottom:0"><span class="nt">备选</span>想把今天换成文化线：16:30 去乌鲁瓦图神庙（门票 50K），看 18:00 场 Kecak 火舞（150K，提前订票）。<b>神庙猴子抢眼镜/帽子/手机，全部收进包里。</b></div>
+      </div>
+    </div>
+
+    <div class="day-card c-komodo" id="d5">
+      <div class="day-head"><div class="day-num"><div class="dn">D5</div><div class="dd">10/7 周三</div></div><h3>飞科莫多 · 半日日落团</h3><span class="dtag">9:00 航班 · 万蝠归巢</span></div>
+      <div class="day-body">
+        <div class="tl">
+          <div class="tl-item"><span class="tl-time">07:00</span>从乌鲁瓦图酒店出发去机场（仅 40 分钟，这是把乌鲁瓦图排前面的原因——不用凌晨起床）</div>
+          <div class="tl-item"><span class="tl-time">08:00</span>到 DPS 国内航站楼，值机（廉航托运行李需提前网购额度）</div>
+          <div class="tl-item"><span class="tl-time">09:00</span><b>起飞，10:00 到科莫多 LBJ</b>，左侧舷窗可看海岛链</div>
+          <div class="tl-item"><span class="tl-time">10:30</span>打车/酒店接送到下拉布安镇上（10 分钟，约 50K），入住放行李</div>
+          <div class="tl-item"><span class="tl-time">11:30</span><b>半日团出发</b>（参考 East Cruise Komodo）：Kelor 岛爬小山坡看海湾全景 + 浮潜看 baby shark → Manjarite 岛珊瑚浮潜</div>
+          <div class="tl-item"><span class="tl-time">17:45</span><b>Kalong 岛</b>：船停湾内看日落晚霞，天黑瞬间<b>上万只果蝠倾巢而出</b>，全程最魔幻的时刻</div>
+          <div class="tl-item"><span class="tl-time">19:00</span>回到镇上，码头附近海鲜晚餐</div>
+        </div>
+        <div class="tip-box"><span class="tt">提示</span>必带：溯溪鞋、防水手机袋、SPF50+ 防晒、晕船药（出发前 30 分钟吃）、现金。<b>大行李箱留在巴厘岛</b>（寄存方案见注意事项），只带两天用的小包上岛。</div>
+        <div class="food-line"><span class="fl">吃</span>下拉布安码头夜市烤鱼和海鲜便宜新鲜；明早 6 点就要出发，今晚早睡。</div>
+      </div>
+    </div>
+
+    <div class="day-card c-komodo" id="d6">
+      <div class="day-head"><div class="day-num"><div class="dn">D6</div><div class="dd">10/8 周四</div></div><h3>科莫多全日团 · 晚班机回巴厘岛</h3><span class="dtag">19:00 航班</span></div>
+      <div class="day-body">
+        <div class="tl">
+          <div class="tl-item"><span class="tl-time">06:00</span>起床，06:30 船公司来酒店接（行李寄存酒店前台，回来再取）</div>
+          <div class="tl-item"><span class="tl-time">07:30</span><b>Padar 岛</b>：登顶约 30 分钟台阶路，三色海湾全景——科莫多最招牌的明信片机位，早到光线好人又少</div>
+          <div class="tl-item"><span class="tl-time">10:00</span><b>粉色沙滩 Pink Beach</b>：红珊瑚碎屑染成的淡粉色沙滩，浮潜 + 拍照</div>
+          <div class="tl-item"><span class="tl-time">11:30</span><b>科莫多国家公园</b>：护林员带队徒步寻找<b>科莫多巨蜥</b>（保持 5 米以上距离，全程跟紧向导），船上或岛上简餐</div>
+          <div class="tl-item"><span class="tl-time">14:00</span><b>Taka Makassar</b> 月牙沙洲 → <b>Manta Point</b> 浮潜看蝠鲼（可遇不可求，看到了就是赚到）</div>
+          <div class="tl-item"><span class="tl-time">16:30</span>回到镇上，取行李、冲洗、简单晚餐</div>
+          <div class="tl-item"><span class="tl-time">17:45</span>打车去 LBJ 机场（10 分钟）</div>
+          <div class="tl-item"><span class="tl-time">19:00</span><b>起飞，20:00 回到登巴萨</b></div>
+          <div class="tl-item"><span class="tl-time">20:45</span>Grab 去 Kuta/机场附近过渡酒店，入住休息</div>
+        </div>
+        <div class="tip-box"><span class="tt">提示</span>Padar 爬山穿运动鞋或溯溪鞋，别穿人字拖；看龙时女生生理期务必提前告知向导（巨蜥对血腥味敏感）；别戴鲜艳的飘动饰品。</div>
+      </div>
+    </div>
+
+    <div class="day-card c-ubud" id="d7">
+      <div class="day-head"><div class="day-num"><div class="dn">D7</div><div class="dd">10/9 周五</div></div><h3>Kuta → 乌布 · 丛林慢游</h3><span class="dtag">车程约 1.5h</span></div>
+      <div class="day-body">
+        <div class="tl">
+          <div class="tl-item"><span class="tl-time">09:30</span>自然醒，退房（科莫多两天很辛苦，今天上午就是用来回血的）</div>
+          <div class="tl-item"><span class="tl-time">10:00</span>Grab/包车去乌布（约 1.5 小时，300-400K）</div>
+          <div class="tl-item"><span class="tl-time">11:30</span>到乌布，先午餐：推荐脏鸭餐（Bebek Betutu）或猪肋排</div>
+          <div class="tl-item"><span class="tl-time">13:30</span><b>圣猴森林公园</b>（9:00-18:00，130K）：几百只长尾猕猴散养在苔藓古寺里；<b>别带挂饰、别掏食物、眼镜收好，和猴子对视也算挑衅</b></div>
+          <div class="tl-item"><span class="tl-time">15:00</span><b>乌布皇宫</b>（免费，15 分钟逛完）+ 对面<b>乌布市场</b>逛手工艺品（砍价从报价 3 折起谈）</div>
+          <div class="tl-item"><span class="tl-time">17:00</span><b>Sweet Orange Walk Trail</b> 稻田轻徒步 1 小时，或回酒店做 SPA（乌布 SPA 全岛性价比最高，90 分钟约 150-250K）</div>
+          <div class="tl-item"><span class="tl-time">19:00</span>晚餐：Moggumung Ubud（韩料）或酒店餐厅</div>
+          <div class="tl-item"><span class="tl-time">21:00</span>约明早 8:00 去机场的车（酒店订包车最稳，300-400K）</div>
+        </div>
+        <div class="tip-box"><span class="tt">提示</span>乌布在山区，早晚比海边凉 3-5°C，带件薄外套；今晚住丛林酒店，明早的稻田/山谷晨景是乌布最值的时刻，别睡懒觉错过。</div>
+      </div>
+    </div>
+
+    <div class="day-card c-fly" id="d8">
+      <div class="day-head"><div class="day-num"><div class="dn">D8</div><div class="dd">10/10 周六</div></div><h3>乌布 → 机场 → 新加坡半日游</h3><span class="dtag">SQ939 · 中转 8h</span></div>
+      <div class="day-body">
+        <div class="tl">
+          <div class="tl-item"><span class="tl-time">08:00</span>从乌布出发（预留堵车余量，正常 1.5 小时到机场）</div>
+          <div class="tl-item"><span class="tl-time">10:00</span>到 DPS 国际航站楼，值机时<b>口头确认行李直挂北京</b></div>
+          <div class="tl-item"><span class="tl-time">13:15</span><b>SQ939 起飞，16:00 到新加坡樟宜 T3</b></div>
+          <div class="tl-item"><span class="tl-time">16:30</span>免签入境（提前填好 SG Arrival Card，走自助通道）</div>
+          <div class="tl-item"><span class="tl-time">17:15</span><b>Jewel 星耀樟宜</b>：40 米室内瀑布雨漩涡，商场连着 T1，步行可达</div>
+          <div class="tl-item"><span class="tl-time">18:30</span>地铁 EW 线进市区（约 30 分钟）或打车 20 分钟</div>
+          <div class="tl-item"><span class="tl-time">19:30</span><b>滨海湾</b>：金沙酒店夜景、鱼尾狮公园、滨海湾花园超级树灯光秀（19:45/20:45 两场）</div>
+          <div class="tl-item"><span class="tl-time">21:30</span>晚餐：老巴刹沙爹街 或 松发肉骨茶</div>
+          <div class="tl-item"><span class="tl-time">22:30</span>回樟宜 T3，逛逛全世界最好睡的机场，有免费电影院和休息区</div>
+          <div class="tl-item"><span class="tl-time">00:30</span><b>SQ810 起飞</b>（红眼，上飞机就睡）</div>
+        </div>
+        <div class="tip-box"><span class="tt">提示</span>新加坡室内空调很冷，备薄外套；地铁可刷 Visa/Mastercard 直接进站，不用买卡。</div>
+      </div>
+    </div>
+
+    <div class="day-card c-fly" id="d9">
+      <div class="day-head"><div class="day-num"><div class="dn">D9</div><div class="dd">10/11 周日</div></div><h3>抵达北京 · 到家</h3><span class="dtag">06:35 落地</span></div>
+      <div class="day-body">
+        <div class="tl">
+          <div class="tl-item"><span class="tl-time">06:35</span>SQ810 落地北京大兴，行程结束</div>
+        </div>
+        <div class="tip-box"><span class="tt">提示</span>红眼航班后第一天别安排高强度工作，留半天补觉。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 景点深度导览 ================= -->
+<section id="spots">
+  <div class="container">
+    <div class="sec-head"><span class="sec-no">05</span><h2>重要景点深度导览</h2></div>
+    <p class="sec-sub">全程 12 个核心看点：看什么 · 玩多久 · 门票 · 在哪天</p>
+
+    <div class="city-block komodo">
+      <h3>科莫多 Komodo（D5-D6）</h3>
+      <div class="spot-grid">
+        <div class="spot-card"><h5><span class="sn">1</span>Padar 岛 <span>D6 早晨 · 爬 30 分钟</span></h5><p>三个颜色不同的海湾在此交汇（白沙、黑沙、粉沙），是科莫多乃至印尼最标志性的观景点。台阶路约 800 级，清晨爬不晒；山顶无遮挡，防晒+带足水。穿运动鞋或溯溪鞋，人字拖很危险。</p></div>
+        <div class="spot-card"><h5><span class="sn">2</span>科莫多国家公园 · 看巨蜥 <span>D6 中午 · 徒步 1-1.5h</span></h5><p>现存最大的蜥蜴，体长可达 3 米，只分布在科莫多一带几个岛上。必须由护林员（ranger）带队，手持木叉开路。保持 5 米以上距离，不奔跑不喧哗；它们短距离冲刺可达 20km/h。</p></div>
+        <div class="spot-card"><h5><span class="sn">3</span>粉色沙滩 Pink Beach <span>D6 上午 · 1-1.5h</span></h5><p>全球仅几处的天然粉沙滩，红色珊瑚碎屑混入白沙形成。上午顺光颜色最粉；水下珊瑚保存完好，浮潜质量高。</p></div>
+        <div class="spot-card"><h5><span class="sn">4</span>Manta Point + Taka Makassar <span>D6 下午 · 浮潜</span></h5><p>Manta Point 是蝠鲼的清洁站，看到翼展 3-4 米的 Manta 从身下滑过是一生难忘的体验（野生，不保证）；Taka Makassar 是落潮时露出海面的月牙形沙洲，航拍绝美。</p></div>
+        <div class="spot-card"><h5><span class="sn">5</span>Kelor 岛 <span>D5 下午 · 1h</span></h5><p>10 分钟小山坡登顶，270 度海湾视野，山下浅滩常有小鲨鱼（baby shark）出没，浮潜就能看到，温顺无危险。</p></div>
+        <div class="spot-card"><h5><span class="sn">6</span>Kalong 岛 · 万蝠归巢 <span>D5 日落 · 1h</span></h5><p>日落时分，栖息在 Kalong 岛红树林里的上万只果蝠集体飞向弗洛勒斯岛觅食，黑压压掠过晚霞——科莫多最魔幻的名场面。船停在湾内观看，不用下船。</p></div>
+      </div>
+    </div>
+
+    <div class="city-block">
+      <h3>Kuta · 乌鲁瓦图（D1-D4）</h3>
+      <div class="spot-grid">
+        <div class="spot-card"><h5><span class="sn">7</span>Kuta Beach 冲浪 <span>D2 上午 · 1.5h</span></h5><p>世界最著名的冲浪入门海滩：浪缓、沙底无礁石、教练密度高。第一节课大概率能站板。选早上 8:30 场次，浪好人少不晒。</p></div>
+        <div class="spot-card"><h5><span class="sn">8</span>Melasti Beach <span>D3 下午 · 3h</span></h5><p>石灰岩悬崖夹出的海湾，海水是通透的蒂芙尼蓝，「果冻海」名不虚传。适合游泳和躺平；悬崖公路本身也是出片点。</p></div>
+        <div class="spot-card"><h5><span class="sn">9</span>Blue Point / Single Fin <span>D4 傍晚 · 3h</span></h5><p>退潮时礁石间露出天然泳池，崖顶 Single Fin 酒吧是看「高手冲浪 + 悬崖日落」的最佳席位，点杯饮料就能坐整场。</p></div>
+        <div class="spot-card"><h5><span class="sn">10</span>乌鲁瓦图神庙 + Kecak <span>D4 备选 · 2h</span></h5><p>建在 70 米悬崖边的印度教神庙，日落时分的 Kecak 火舞以海为背景，几十人围坐吟唱，仪式感拉满。猴子极凶，随身小物全部收好。</p></div>
+      </div>
+    </div>
+
+    <div class="city-block ubud">
+      <h3>乌布 · 新加坡（D7-D8）</h3>
+      <div class="spot-grid">
+        <div class="spot-card"><h5><span class="sn">11</span>圣猴森林公园 <span>D7 下午 · 1.5h · 130K</span></h5><p>乌布中心的原始丛林寺庙群，几百只长尾猕猴自由生活其中。值回票价，但猴子不怕人：食物、眼镜、挂饰、敞开的包都是目标。</p></div>
+        <div class="spot-card"><h5><span class="sn">12</span>Jewel 星耀樟宜 <span>D8 傍晚 · 1-2h · 免费</span></h5><p>全球最美机场配套：40 米高的室内瀑布「雨漩涡」从玻璃穹顶倾泻而下，周围环绕着森林谷。转机中转的终极答案，晚上有灯光秀。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 06 注意事项 ================= -->
+<section id="tips">
+  <div class="container">
+    <div class="sec-head"><span class="sec-no">06</span><h2>旅行注意事项</h2></div>
+    <p class="sec-sub">签证入境 · 钱 · 交通 · 科莫多专项 · 健康安全 · 新加坡中转</p>
+
+    <div class="tips-grid">
+      <div class="tip-card hot">
+        <h3><span class="no">01</span>签证与入境（印尼）</h3>
+        <ul>
+          <li><b>e-VOA 电子落地签</b>：提前在印尼移民局官网办理（约 500K 印尼盾），出签后存手机+打印；比落地现场排队快很多</li>
+          <li><b>电子入境卡</b>：抵达前 3 天内填（All Indonesia App/官网），生成二维码截图</li>
+          <li><b>巴厘岛旅游税 150K</b>：Love Bali 网站/App 缴纳，二维码截图，景点可能抽查</li>
+          <li><b>护照有效期</b>需超过入境日 6 个月以上；返程机票订单备查</li>
+          <li>政策变动较快，<b>出发前一两周再核实一遍</b>最新要求</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <h3><span class="no">02</span>货币与支付</h3>
+        <ul>
+          <li>印尼盾速算：<b>去掉末尾 3 个 0，再除以 2.2 ≈ 人民币</b>（100K ≈ ¥45）</li>
+          <li>国内银行换约 <b>500 万印尼盾</b>现金，备 10K/20K/50K 小面额</li>
+          <li>科莫多岛上<b>基本只收现金</b>；巴厘岛上大店可刷卡，小店/沙滩/小费现金为主</li>
+          <li>小费参考：massage 20-50K，包车司机 50K/天，酒店行李员 10-20K</li>
+          <li>机场汇率差，别在机场多换；市区 BCA 银行 ATM 取现手续费低</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <h3><span class="no">03</span>交通</h3>
+        <ul>
+          <li>打车用 <b>Grab / Gojek</b> 双 App 比价，明码标价不扯皮</li>
+          <li>机场内官方出租贵：走到到达厅外、便利店门口再定位叫车</li>
+          <li>跨区移动（Kuta→乌鲁瓦图→机场→乌布）直接 Grab 或酒店包车，价格见速查表</li>
+          <li><b>不建议租摩托</b>：无国际驾照出事故保险不赔，乌鲁瓦图山路坡陡弯急</li>
+          <li>巴厘岛堵车严重（尤其 Kuta↔机场傍晚），去机场永远多留 30 分钟</li>
+        </ul>
+      </div>
+      <div class="tip-card hot">
+        <h3><span class="no">04</span>科莫多专项</h3>
+        <ul>
+          <li><b>大行李留在巴厘岛</b>：寄存 Kuta/机场酒店（10/8 回来还住同区），只带 2 天小包上岛</li>
+          <li>廉航托运行李需<b>提前在官网/订票平台购买额度</b>，现场买贵一倍</li>
+          <li>晕船药出发前 30 分钟吃；船上有浪时坐后排更稳</li>
+          <li>订团时确认：国家公园门票（约 300-400K/人）是否含在团费内——这是最常见的隐藏费用</li>
+          <li>印尼国内航班临时改时刻很常见，<b>10/7、10/8 两天早上都再核对一次</b>航班动态</li>
+          <li>看科莫多龙跟紧 ranger；生理期女生提前告知向导</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <h3><span class="no">05</span>健康与安全</h3>
+        <ul>
+          <li><b>不喝自来水</b>，刷牙也用瓶装水（Bali Belly 水土不服很常见）；冰块在正规餐厅没问题</li>
+          <li>防晒 SPF50+ 勤补涂，10 月赤道阳光极强；晒后修复啫喱备一支</li>
+          <li>肠胃药、晕船药、驱蚊液必带；浮潜后耳朵进水及时处理</li>
+          <li>猴子场所（猴林/乌鲁瓦图神庙）：眼镜、帽子、手机挂绳全部收好</li>
+          <li>买含海岛活动责任的旅行保险（冲浪、浮潜、出海都算）</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <h3><span class="no">06</span>新加坡中转（D8）</h3>
+        <ul>
+          <li>中国护照<b>免签 30 天</b>，但入境前 3 天内填 SG Arrival Card（免费，官网/APP）</li>
+          <li>两程新航，值机时确认<b>行李直挂北京</b>，市区只带随身包</li>
+          <li>地铁可刷 Visa/Mastercard 非接触进站；打车用 Grab</li>
+          <li>樟宜机场过夜：免费电影院、躺椅休息区、24 小时餐饮，红眼前能补觉</li>
+          <li>新加坡室内空调冷，备薄外套</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 07 美食与购物 ================= -->
+<section id="food">
+  <div class="container">
+    <div class="sec-head"><span class="sec-no">07</span><h2>美食与购物推荐</h2></div>
+    <p class="sec-sub">按区域：吃什么 · 买什么 · 去哪买 · 避坑提示</p>
+
+    <div class="panel">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>区域</th><th>必吃</th><th>推荐店/位置</th><th>人均</th></tr></thead>
+          <tbody>
+            <tr><td><b>Kuta</b></td><td>烤猪肋排、印尼炒饭 Nasi Goreng、鲜榨果汁</td><td>Beachwalk 周边及海滩沿线 Warung</td><td>60-150K</td></tr>
+            <tr><td><b>乌鲁瓦图</b></td><td>金巴兰日落海鲜烧烤（烤龙虾/烤鱼/空心菜）</td><td>金巴兰海滩大排档（日落前 1 小时去占位）</td><td>200-400K</td></tr>
+            <tr><td><b>科莫多</b></td><td>码头夜市烤鱼、海鲜拼盘</td><td>下拉布安码头夜市</td><td>100-200K</td></tr>
+            <tr><td><b>乌布</b></td><td>脏鸭餐 Bebek Betutu、烤乳猪饭 Babi Guling</td><td>Moggumung Ubud（韩料）；本地脏鸭餐老店</td><td>100-250K</td></tr>
+            <tr><td><b>新加坡</b></td><td>肉骨茶、沙爹、叻沙</td><td>松发肉骨茶、老巴刹沙爹街</td><td>S$10-25</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="food-strip"><b>伴手礼</b>
+        <span class="fchip">猫屎咖啡 Kopi Luwak（乌布咖啡园）</span>
+        <span class="fchip">精油/手工皂（乌布市场）</span>
+        <span class="fchip">藤编包 Ata Bag</span>
+        <span class="fchip">银饰（Celuk 村）</span>
+        <span class="fchip">木雕</span>
+        <span class="fchip">印尼虾片 Kerupuk</span>
+      </div>
+      <div class="note-box" style="margin-bottom:0"><span class="nt">避坑</span>乌布市场砍价从报价 <b>3 折</b>起谈，成交价一般在 4-5 折；猫屎咖啡在种植园试喝免费，买前比价；机场免税店价格一般不如市区。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 08 行李清单 ================= -->
+<section id="packing">
+  <div class="container">
+    <div class="sec-head"><span class="sec-no">08</span><h2>行李与物品准备清单</h2></div>
+    <p class="sec-sub">可勾选核对（自动保存在本机）· 海岛版 · 出发前逐项打勾</p>
+
+    <div class="pack-progress">
+      <span class="pp-num" id="packPct">0 / 0</span>
+      <div class="pp-bar"><div class="pp-fill" id="packBar"></div></div>
+      <button class="reset-btn" id="packReset">清空重勾</button>
+    </div>
+
+    <div class="pack-grid">
+      <div class="gcard">
+        <h4><span><span class="gicon" style="background:var(--red)"></span>证件资金类（贴身携带）</span><span class="gcount">0/7</span></h4>
+        <ul>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">护照</span></label><small>有效期需超过入境日 6 个月；复印 2 份分开放</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">e-VOA 电子签</span></label><small>打印 1 份 + 手机相册/邮箱各存 1 份</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">电子入境卡二维码（印尼 + 新加坡 SGAC）</span></label><small>出发前 3 天内填写，截图保存</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">巴厘岛旅游税二维码</span></label><small>Love Bali 缴纳 150K 后生成，截图</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">机票 + 酒店 + 出海团订单离线包</span></label><small>全部截图存相册，邮箱备份；值机/入住/上船都要出示</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">信用卡 ×2</span></label><small>Visa + Mastercard 各一，开通境外支付与非接触付款</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">印尼盾现金 500 万</span></label><small>国内银行预约换汇，备 10K/20K/50K 小面额</small></li>
+        </ul>
+      </div>
+      <div class="gcard">
+        <h4><span><span class="gicon" style="background:var(--teal)"></span>海岛装备（本次核心）</span><span class="gcount">0/6</span></h4>
+        <ul>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">溯溪鞋</span></label><small>科莫多上下船、礁石滩、Padar 爬山全靠它，最值的一件装备</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">泳衣 ×2 + 速干毛巾</span></label><small>天天下水，一件晾不干；船上有淡水冲洗但毛巾自带</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">防水手机袋 + 小防水包</span></label><small>浮潜拍照、船上防浪溅</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">晕船药</span></label><small>出发前 30 分钟吃；科莫多两天都在船上</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">防晒霜 SPF50+ + 晒后修复</span></label><small>选海洋友好（reef-safe）配方，保护珊瑚</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">遮阳帽 + 墨镜 + 防晒衣</span></label><small>船上无遮挡暴晒，物理防晒最管用</small></li>
+        </ul>
+      </div>
+      <div class="gcard">
+        <h4><span><span class="gicon" style="background:var(--blue)"></span>衣物与日用</span><span class="gcount">0/5</span></h4>
+        <ul>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">夏装 4-5 套 + 薄外套 1 件</span></label><small>乌布早晚凉 3-5°C，新加坡机场空调冷</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">运动鞋 1 双 + 拖鞋 1 双</span></label><small>Padar 爬山穿运动鞋；拖鞋日常</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">纱笼/长围巾</span></label><small>进印度教寺庙需遮腿（现场也可租）</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">驱蚊液</span></label><small>乌布丛林和傍晚必备</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">折叠环保袋</span></label><small>市场购物、装湿泳衣</small></li>
+        </ul>
+      </div>
+      <div class="gcard">
+        <h4><span><span class="gicon" style="background:var(--green)"></span>电子与药品</span><span class="gcount">0/5</span></h4>
+        <ul>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">欧标两圆脚转换插头（C 型）×2 + 插线板</span></label><small>印尼 220V 欧标插座</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">充电宝（≤20000mAh，随身登机）</span></label><small>出海一整天没地方充电</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">印尼流量卡/eSIM</span></label><small>淘宝买 Telkomsel 比机场便宜一半；落地即可用</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">离线地图 + 常用 App</span></label><small>Google Maps 下载巴厘岛/科莫多离线包；装好 Grab、Gojek、WhatsApp（当地商家都用 WhatsApp 联系）</small></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">药品包</span></label><small>肠胃药（水土不服高发）、感冒药、退烧药、创可贴、碘伏棉棒</small></li>
+        </ul>
+      </div>
+      <div class="gcard" style="grid-column:1/-1">
+        <h4><span><span class="gicon" style="background:#5a6b7d"></span>红眼航班舒适包（10/10 回程 SQ810 用）</span><span class="gcount">0/2</span></h4>
+        <ul>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">U 型枕、眼罩、耳塞、保湿喷雾（≤100ml）</span></label></li>
+          <li class="pitem"><label><input type="checkbox"><span class="pt">机上保暖</span></label><small>红眼航班夜里冷，薄外套别托运，随身带上飞机</small></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 09 实用速查 ================= -->
+<section id="quickref">
+  <div class="container">
+    <div class="sec-head"><span class="sec-no">09</span><h2>实用信息速查</h2></div>
+    <p class="sec-sub">交通接驳 · 紧急电话 · 货币电源时差 · 官方网站 · 行前检查单</p>
+
+    <div class="panel" style="border-left:5px solid var(--blue)">
+      <b style="color:var(--navy);font-size:16px">交通接驳指南 · 全程 7 段</b>
+      <div class="spot-grid">
+        <div class="spot-card"><h5><span class="sn">1</span>登巴萨机场 → Kuta 酒店 <span>10/3 晚</span></h5><p>到达厅官方出租柜台贵（到 Kuta 开口 150-200K）。<b>正确姿势：出到达厅步行 5 分钟到机场外便利店/居民区门口，用 Grab 叫车约 50-80K，15 分钟到</b>。深夜也有车，不用担心。</p></div>
+        <div class="spot-card"><h5><span class="sn">2</span>Kuta → 乌鲁瓦图 <span>10/5 上午</span></h5><p>Grab 约 40 分钟、150-200K，直接叫到酒店门口。行李多就选 6 座车型（GrabCar Plus），贵 30% 左右。</p></div>
+        <div class="spot-card"><h5><span class="sn">3</span>乌鲁瓦图 → 登巴萨机场国内航站楼 <span>10/7 早 7:00</span></h5><p>前一晚让酒店约好车（或提前预约 Grab），<b>约 40 分钟、150-200K，早上不堵车</b>。注意去的是国内航站楼（Domestic），别走错。</p></div>
+        <div class="spot-card"><h5><span class="sn">4</span>科莫多 LBJ 机场 ↔ 下拉布安镇 <span>10/7-10/8</span></h5><p>机场到镇上仅 10 分钟。订酒店时选含免费接送的，或现场打车约 50K。镇上很小，码头、餐厅、旅行社全部步行可达。</p></div>
+        <div class="spot-card"><h5><span class="sn">5</span>登巴萨机场 → Kuta 过渡酒店 <span>10/8 晚 20:45</span></h5><p>同第 1 段：走出机场再 Grab，15 分钟到。晚班机落地累，酒店就选机场 10 分钟车程内的。</p></div>
+        <div class="spot-card"><h5><span class="sn">6</span>Kuta → 乌布 <span>10/9 上午 10:00</span></h5><p>Grab 约 1.5 小时、300-400K；两人以上酒店订包车同价更舒服。乌布镇中心单行线多、容易堵，让司机直接开到酒店。</p></div>
+        <div class="spot-card"><h5><span class="sn">7</span>乌布 → 登巴萨机场国际航站楼 <span>10/10 早 8:00</span></h5><p>全程最关键的一段：<b>前一晚和酒店订好包车（300-400K），8:00 出发</b>，正常 1.5 小时，留足堵车余量 10:00 前到。这次是国际航站楼（International）。</p></div>
+        <div class="spot-card"><h5><span class="sn">8</span>樟宜 T3 ↔ 滨海湾 <span>10/10 傍晚</span></h5><p>地铁 EW 线 Changi Airport 站 → Tanah Merah 换乘 → City Hall/Raffles Place，约 35 分钟、S$2.5，<b>Visa/Mastercard 直接刷闸机</b>；打车 20 分钟、S$20-30。Jewel 在 T1 旁，从 T3 步行 10 分钟。</p></div>
+      </div>
+      <small style="color:var(--muted);display:block;margin-top:12px">价格为 2026 年公开参考价，以 Grab/Gojek 实时报价为准；跨区移动都建议前一天约好车，避免临时叫不到。</small>
+    </div>
+
+    <div class="quick-grid">
+      <div class="panel" style="margin-bottom:0">
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><td style="width:120px"><b>紧急电话</b></td><td>印尼通用紧急 <b>112</b>；报警 110；急救 118/119</td></tr>
+              <tr><td><b>中国使领馆</b></td><td>驻登巴萨总领馆领保：+62-361-239902；外交部全球领保热线：+86-10-12308（24 小时）</td></tr>
+              <tr><td><b>货币</b></td><td>印尼盾 IDR；速算：去掉 3 个 0 再 ÷2.2 ≈ 人民币（1 元 ≈ 2,200 盾，2026 年参考）</td></tr>
+              <tr><td><b>电源</b></td><td>220V / 50Hz，欧标两圆脚（C 型插座），需转换插头</td></tr>
+              <tr><td><b>时差</b></td><td>巴厘岛、科莫多、新加坡均为 UTC+8，<b>与北京无时差</b></td></tr>
+              <tr><td><b>语言</b></td><td>印尼语；旅游区英语通用。Terima kasih（谢谢）/ Selamat pagi（早上好）很加分</td></tr>
+              <tr><td><b>天气（10 月）</b></td><td>旱季末 26-32°C，晴为主偶有阵雨；海上紫外线极强</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panel" style="margin-bottom:0">
+        <b style="color:var(--navy)">官方网站与 App 一览</b>
+        <div class="site-chips">
+          <a href="https://molina.imigrasi.go.id" target="_blank" rel="noopener">印尼 e-VOA 电子签 molina.imigrasi.go.id</a>
+          <a href="https://lovebali.baliprov.go.id" target="_blank" rel="noopener">巴厘岛旅游税 lovebali.baliprov.go.id</a>
+          <a href="https://eservices.ica.gov.sg/sgarrivalcard" target="_blank" rel="noopener">新加坡 SG Arrival Card</a>
+          <a href="https://www.klook.com" target="_blank" rel="noopener">KLOOK（冲浪课/门票）</a>
+          <a href="https://www.airasia.com" target="_blank" rel="noopener">亚航（科莫多段）</a>
+          <a href="https://www.batikair.com" target="_blank" rel="noopener">Batik Air（科莫多段）</a>
+          <a href="https://www.singaporeair.com" target="_blank" rel="noopener">新加坡航空（值机）</a>
+          <a href="https://www.jewelchangiairport.com" target="_blank" rel="noopener">Jewel 星耀樟宜</a>
+        </div>
+        <small style="color:var(--muted);display:block;margin-top:12px">必装 App：Grab、Gojek、WhatsApp、Google Maps、翻译 App；e-VOA 官网谨防仿冒网站，认准 imigrasi.go.id 官方域名。</small>
+      </div>
+    </div>
+
+    <div class="panel">
+      <b style="color:var(--navy)">行前最后检查单（出发前 48 小时）</b> · <small style="color:var(--muted)">可勾选，自动保存</small>
+      <div style="margin-top:8px">
+        <label class="chk-item"><input type="checkbox" data-chk><span>① 新航两段在线值机（SQ939 / SQ810），选座靠窗；确认 SQ946 前段国内→新加坡航班的中转缓冲 ≥3 小时</span></label>
+        <label class="chk-item"><input type="checkbox" data-chk><span>② 科莫多两段机票、两个出海团订单全部出票并截图（确认 10/8 全日团回镇时间 ≤17:00）</span></label>
+        <label class="chk-item"><input type="checkbox" data-chk><span>③ e-VOA、电子入境卡、旅游税、SG Arrival Card 四个二维码/凭证全部截图离线保存</span></label>
+        <label class="chk-item"><input type="checkbox" data-chk><span>④ 旅行保险购买并确认含冲浪/浮潜/出海责任</span></label>
+        <label class="chk-item"><input type="checkbox" data-chk><span>⑤ 信用卡境外支付功能确认；印尼盾现金换好并分两处存放</span></label>
+        <label class="chk-item"><input type="checkbox" data-chk><span>⑥ 电话卡/eSIM 备好；Grab、Gojek、WhatsApp、Google Maps 装好并完成注册</span></label>
+        <label class="chk-item"><input type="checkbox" data-chk><span>⑦ 复查天气预报；行李清单逐项打勾</span></label>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <b>巴厘岛 · 科莫多 8 日旅行攻略（详细版）</b><br>
+    行程日期 2026.10.03 - 10.11 · 路线：新加坡 — Kuta — 乌鲁瓦图 — 科莫多 — 乌布 — 新加坡 — 北京<br>
+    价格与政策信息整理自 2026 年公开资讯及实时票价查询，出行前请以官方最新公告为准。祝旅途愉快！
+  </div>
+</footer>
+
+<button id="backTop" title="回到顶部">&#8593;</button>
+
+<script>
+(function(){
+  var dep=new Date("2026-10-03T17:45:00+08:00");
+  var ret=new Date("2026-10-11T06:35:00+08:00");
+  var el=document.getElementById("cd");
+  function pad(n){return n<10?"0"+n:n;}
+  function tick(){
+    var now=new Date(),diff=dep-now;
+    if(diff>0){
+      var d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);
+      el.textContent=d+" 天 "+pad(h)+" 时 "+pad(m)+" 分 "+pad(s)+" 秒";
+    }else if(now<ret){
+      var day=Math.min(Math.floor((now-dep)/86400000)+1,9);
+      el.textContent="行程进行中 · 第 "+day+" 天";
+    }else{
+      el.textContent="本行程已结束，期待下一次出发";
+    }
+  }
+  tick();setInterval(tick,1000);
+})();
+
+(function(){
+  var links=[].slice.call(document.querySelectorAll(".navbar a[href^='#']"));
+  var map={};
+  links.forEach(function(a){var id=a.getAttribute("href").slice(1);(map[id]=map[id]||[]).push(a);});
+  var obs=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting&&map[e.target.id]){
+        links.forEach(function(a){a.classList.remove("on");});
+        map[e.target.id].forEach(function(a){a.classList.add("on");});
+      }
+    });
+  },{rootMargin:"-10% 0px -78% 0px"});
+  [].slice.call(document.querySelectorAll("main section[id]")).forEach(function(s){obs.observe(s);});
+})();
+
+(function(){
+  var boxes=[].slice.call(document.querySelectorAll("#packing input[type=checkbox]"));
+  var bar=document.getElementById("packBar"),pct=document.getElementById("packPct");
+  function upd(){
+    var done=boxes.filter(function(b){return b.checked}).length;
+    var p=boxes.length?Math.round(done/boxes.length*100):0;
+    bar.style.width=p+"%";
+    pct.textContent=done+" / "+boxes.length+" 项已备好（"+p+"%）";
+    [].slice.call(document.querySelectorAll("#packing .gcard")).forEach(function(card){
+      var bs=[].slice.call(card.querySelectorAll("input[type=checkbox]"));
+      var c=bs.filter(function(b){return b.checked}).length;
+      var el=card.querySelector(".gcount");
+      if(el)el.textContent=c+"/"+bs.length;
+      card.classList.toggle("done",bs.length>0&&c===bs.length);
+    });
+    var st={};boxes.forEach(function(b,i){st[i]=b.checked});
+    try{localStorage.setItem("bali_packing",JSON.stringify(st))}catch(e){}
+  }
+  boxes.forEach(function(b){b.addEventListener("change",upd)});
+  document.getElementById("packReset").addEventListener("click",function(){
+    boxes.forEach(function(b){b.checked=false});upd();
+  });
+  try{
+    var s=JSON.parse(localStorage.getItem("bali_packing")||"{}");
+    boxes.forEach(function(b,i){b.checked=!!s[i]});
+  }catch(e){}
+  upd();
+})();
+
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll("input[data-chk]"));
+  function upd(){
+    var st={};cbs.forEach(function(b,i){st[i]=b.checked});
+    try{localStorage.setItem("bali_checklist",JSON.stringify(st))}catch(e){}
+  }
+  cbs.forEach(function(b){b.addEventListener("change",upd)});
+  try{
+    var s=JSON.parse(localStorage.getItem("bali_checklist")||"{}");
+    cbs.forEach(function(b,i){b.checked=!!s[i]});
+  }catch(e){}
+})();
+
+(function(){
+  var btn=document.getElementById("backTop");
+  window.addEventListener("scroll",function(){
+    btn.classList.toggle("show",window.scrollY>600);
+  });
+  btn.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
+})();
+</script>
+</body>
+</html>
